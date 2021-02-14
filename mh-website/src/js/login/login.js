@@ -21,21 +21,21 @@ const googleIcon = (
 
 export default function Login() {
 
+
     useEffect(() => {
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 console.log(user)
 
                 getUserFromUID(user.uid)
-                    .then(user => {
-                        if (user) {
+                    .then(data => {
+                        if (data) {
                             history.push('/dashboard')
                             return
                         }
                         setCreateMode(true)
+                        setUID(user.uid)
                     })
-                //check if account created
-                //useHistory().push('/dashboard')
             }
         });
     }, []);
@@ -47,6 +47,7 @@ export default function Login() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const [createMode, setCreateMode] = useState(false)
+    const [uid, setUID] = useState()
 
     function handleSuccess() {
         console.log('pog!!')
@@ -91,7 +92,7 @@ export default function Login() {
             </div>
             <div className='login-area'>
                 {createMode ? (
-                    <CreateForm />
+                    <CreateForm uid={uid} />
                 ) : (<>
 
                     <div className='login-subtitle'>

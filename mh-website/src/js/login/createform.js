@@ -1,22 +1,38 @@
 
 import 'materialize-css';
 import { TextInput, Row, Col } from 'react-materialize';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
+import foreach from 'lodash.foreach';
+
+import { createUserFromUID } from '../utils/firestoreUtils'
 
 
+const fields = [
+    'first',
+    'last',
+    'age',
+    'weight',
+    'gender',
+    'heightfeet',
+    'heightinches'
+]
 
-export default function CreateForm() {
+export default function CreateForm(props) {
 
-    var values = {}
-
+    //var values = {}
+    const [values, setValues] = useState({})
     function handleInputChange(event) {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.id;
         console.log(name, ' ', value)
         values[name] = value
-
-        console.log(values)
+        setValues(values)
     }
+
+    let history = useHistory()
 
     return (
         <>
@@ -26,6 +42,18 @@ export default function CreateForm() {
             <form onSubmit={(e) => {
                 e.preventDefault();
                 console.log(values)
+                var valid = true
+                foreach(values, (value, key) => {
+                    if (!fields.includes(key)) {
+                        valid = false;
+                    }
+                })
+                if (valid) {
+                    createUserFromUID(props.uid, values)
+                        .then(() => {
+                            history.push('/dashboard')
+                        })
+                }
             }}>
                 <Row className='login-row'>
                     <Col s={6}  >

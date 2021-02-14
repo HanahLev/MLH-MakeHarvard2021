@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.7.1",
     "firebase": "^8.2.7",
     "formik": "^2.2.6",
+    "lodash.foreach": "^4.5.0",
     "materialize-css": "^1.0.0-rc.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

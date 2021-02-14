@@ -6,6 +6,7 @@ import Home from './home/home'
 import Login from './login/login'
 import About from './about/about'
 import Solutions from './solutions/solutions'
+import Dashboard from './dashboard/dashboard'
 
 function App() {
   return (
@@ -37,7 +38,7 @@ function NavBar() {
     <div className="nav-bar">
       {routes.map((item, index) => (
         <CustomLink key={index} to={item.to} className="nav-item">
-          {item.children}
+          {item.children && item.children}
         </CustomLink>
       ))}
 
@@ -69,6 +70,11 @@ const routes = [
     children: 'Login',
     component: <Login />,
     navbar: true
+  },
+  {
+    to: '/dashboard',
+    component: <Dashboard />,
+    navbar: false
   }
 ]
 
