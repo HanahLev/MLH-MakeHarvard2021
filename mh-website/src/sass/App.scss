@@ -19,9 +19,66 @@
   top: 0;
   left: 0;
   display: flex;
+  pointer-events: none;
 }
 
 .nav-item {
   cursor: pointer;
   user-select: none;
+  pointer-events: all;
+}
+
+// pillrlogo
+#pillrlogo {
+  height: calcvw(52);
+  width: auto;
+  position: absolute;
+  top: calcvw(50);
+  left: calcvw(330);
+  .cls-1 {
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+  }
+  .cls-2 {
+    fill: #140303;
+  }
+}
+
+#flowysvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  .cls-1 {
+    fill: #676f84;
+    opacity: 0.5;
+  }
+}
+
+.nav-about {
+  position: absolute;
+  font-size: calcvw(18);
+  left: calcvw(560);
+  top: calcvw(64);
+  font-weight: bold;
+}
+
+.nav-vision {
+  position: absolute;
+  font-size: calcvw(18);
+  width: calcvw(89);
+  left: calcvw(670);
+  top: calcvw(64);
+  font-weight: bold;
+}
+
+.nav-login {
+  position: absolute;
+  font-size: calcvw(18);
+  width: calcvw(200);
+  right: calcvw(-1570);
+  top: calcvw(64);
+  font-weight: bold;
 }

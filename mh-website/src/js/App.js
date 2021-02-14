@@ -8,6 +8,8 @@ import About from './about/about'
 import Solutions from './solutions/solutions'
 import Dashboard from './dashboard/dashboard'
 
+import { pillrlogo } from '../assets/asset'
+
 import { CustomLink } from './components'
 
 function App() {
@@ -40,9 +42,11 @@ function NavBar() {
 
     <div className="nav-bar">
       {routes.map((item, index) => (
+        item.navbar &&
         <CustomLink key={index} to={item.to} className="nav-item">
           {item.children && item.children}
         </CustomLink>
+
       ))}
 
     </div>
@@ -52,20 +56,20 @@ function NavBar() {
 const routes = [
 
   {
-    to: '/solutions',
-    children: 'Solutions',
+    to: '/ourvision',
+    children: <div className='nav-vision'>Our Vision</div>,
     component: <Solutions />,
     navbar: true
   },
   {
     to: '/about',
-    children: 'About',
+    children: <div className='nav-about'>About</div>,
     component: <About />,
     navbar: true
   },
   {
     to: '/login',
-    children: 'Login',
+    children: <div className='nav-login'>Sign In/ Sign Up</div>,
     component: <Login />,
     navbar: true
   },
@@ -76,7 +80,7 @@ const routes = [
   },
   {
     to: '/',
-    children: 'Home',
+    children: pillrlogo,
     component: <Home />,
     navbar: true
   },
