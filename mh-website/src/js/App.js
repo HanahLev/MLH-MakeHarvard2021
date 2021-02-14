@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, useHistory, Switch } from 'react-router-dom';
 import React from 'react'
-
 import '../sass/App.scss';
 
 import Home from './home/home'
@@ -21,13 +20,9 @@ function App() {
                 {item.component}
                 {item.navbar && <NavBar />}
               </>
-
-
             </Route>
           ))}
         </Switch>
-
-
       </Router>
     </div>
   );
