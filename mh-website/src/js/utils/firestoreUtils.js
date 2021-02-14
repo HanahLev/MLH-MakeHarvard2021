@@ -17,3 +17,8 @@ export function getUserFromUID(uid) {
             return data
         })
 }
+
+export function createUserFromUID(uid, data) {
+    var userRef = db.doc('users/' + uid);
+    return userRef.set(data)
+}
