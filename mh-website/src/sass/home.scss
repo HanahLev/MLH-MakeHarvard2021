@@ -44,6 +44,7 @@
 .pill {
     user-select: none;
     cursor: pointer;
+    width: 45px;
 }
 .pill-text {
     opacity: 0;
@@ -52,5 +53,11 @@
     font-size: calcvw(18);
     .hovered-pill {
         opacity: 1;
+    }
+}
+
+#pillsvg {
+    .cls-1 {
+        fill: #80889f;
     }
 }

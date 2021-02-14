@@ -1,5 +1,5 @@
 import '../../sass/home.scss'
-import { flowysvg, pillbottlesvg } from '../../assets/asset'
+import { flowysvg, pillbottlesvg, pillsvg } from '../../assets/asset'
 import { useRef } from 'react';
 
 export default function Home() {
@@ -80,7 +80,7 @@ function PillInteractive(props) {
                     pillRef.current.style.opacity = 1
                 }}
                 className='pill' style={{ left: calcvw(props.x), top: calcvw(props.y), transform: 'rotate(' + randomDeg() + ')' }}>
-                hello
+                {pillsvg}
             </div>
         </>
     )
