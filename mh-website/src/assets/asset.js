@@ -44,6 +44,15 @@ export const flowysvg = (
     </svg>
 )
 
+export const pillbottlesvg = (
+    <svg id="pillbottlesvg" viewBox="0 0 369.47569 421.93943">
+        <rect class="cls-1" x="736.51153" y="325.38063" width="211.8168" height="64.8048" rx="12" transform="translate(-804.92954 187.97508) rotate(-30.00002)" />
+        <rect class="cls-2" x="809.11322" y="364.94915" width="254.97946" height="311.92708" rx="45.30425" transform="translate(-873.87627 256.92188) rotate(-30.00002)" />
+        <path class="cls-3" d="M999.32266,374.27985,866.82584,450.77692a26.62364,26.62364,0,0,0-9.74488,36.36829l48.5503,84.09124a26.62322,26.62322,0,0,0,36.36816,9.74488L1074.496,504.48426Z" transform="translate(-738.90094 -281.16907)" />
+    </svg>
+)
+
+
 export const aboutussvg = (
 
     <svg id='aboutussvg' data-name="Layer 5" viewBox="0 0 1275.3 769.76" xmlns="http://www.w3.org/2000/svg">

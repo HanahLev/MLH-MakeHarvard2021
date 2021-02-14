@@ -1,2 +1,56 @@
+@import "./variables.scss";
 .home-wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+.home-inner {
+    width: 100%;
+    height: 100%;
+    padding: calcvw(350) calcvw(330) 0;
+}
+
+.home-title {
+    font-size: calcvw(83);
+    font-family: $font-playfair;
+    font-weight: bold;
+    text-align: left;
+    color: black;
+}
+
+.pill-container {
+    position: absolute;
+    width: calcvw(440);
+    left: calcvw(1240);
+    top: calcvw(370);
+}
+
+#pillbottlesvg {
+    .cls-1 {
+        fill: #22202e;
+    }
+    .cls-2 {
+        fill: #4c678b;
+    }
+    .cls-3 {
+        fill: #80889f;
+    }
+}
+
+.pill,
+.pill-text {
+    position: absolute;
+}
+.pill {
+    user-select: none;
+    cursor: pointer;
+}
+.pill-text {
+    opacity: 0;
+    transition: opacity 300ms;
+    font-weight: bold;
+    font-size: calcvw(18);
+    .hovered-pill {
+        opacity: 1;
+    }
 }
