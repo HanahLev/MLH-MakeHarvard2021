@@ -8,6 +8,8 @@ import About from './about/about'
 import Solutions from './solutions/solutions'
 import Dashboard from './dashboard/dashboard'
 
+import { CustomLink } from './components'
+
 function App() {
   return (
     <div className="App">
@@ -16,13 +18,14 @@ function App() {
         <Switch>
 
           {routes.map((item, index) => (
-            <Route key={index} exact path={item.to} >
+            <Route key={index} path={item.to} >
               <>
                 {item.component}
                 {item.navbar && <NavBar />}
               </>
             </Route>
           ))}
+
         </Switch>
       </Router>
     </div>
@@ -47,12 +50,7 @@ function NavBar() {
 }
 
 const routes = [
-  {
-    to: '/',
-    children: 'Home',
-    component: <Home />,
-    navbar: true
-  },
+
   {
     to: '/solutions',
     children: 'Solutions',
@@ -75,22 +73,13 @@ const routes = [
     to: '/dashboard',
     component: <Dashboard />,
     navbar: false
-  }
+  },
+  {
+    to: '/',
+    children: 'Home',
+    component: <Home />,
+    navbar: true
+  },
 ]
 
-
-function CustomLink(props) {
-  let history = useHistory();
-
-  function handleClick() {
-    history.push(props.to);
-  }
-  return (
-    <div {...props}
-      onClick={handleClick}
-    >
-      {props.children}
-    </div>
-  )
-}
 
