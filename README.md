@@ -11,6 +11,7 @@
 2. App cross references medicine ingredients -> makes sure no issues with other medicines the user is taking
 3. App will remind user when to take medicine
 4. App will connect to dispenser and release proper medicines and dosages when user acknowledges the reminder
+5. Also the server is in firebase with multifactor authentication to ensure data safety and ease access of data trough google home as well as the raspberry microcontroller.
 ### CAD
 #### Dispenser design
 1. Spinning release mechanism (like bubble gum machine)
@@ -25,8 +26,15 @@
     - App tells door to open and release that day/time’s medicine
     - Simplest design but requires greatest involvement of user
 ### Electronics (CAD and/or just drawing/listing necessary parts and how they would be connected)
-1. Motors/servos?
-2. sensors?
+1. Motors/servos
+    - Two Micro servo motors
+    - L298N Motor Driver
+    - Arduino Uno/ Raspberry PI
+2. Computation/Senosrs
+    - For raspberry the debian OS based Amazon echo SDK is used to send reminders as well notification is generated in the mobile 
+    - The raspberry then simulates the motor driver to rotate the servo for the pills to to be batched out to the patient.
+    - Also the IR sensor in place ensures the pills comes out only when the person is in the proximity of the device
 ## Potential issues
-- Not very familiar with electronics
-- Maybe too much for 24 hours?
+- Computation and optimization of timely API call and making a modulated product requires more real time testing
+- Unavailability of all the hardwares, have to consider speculated scenarios. 
+- Have to compromise with the size to make the Arduino fit inside
