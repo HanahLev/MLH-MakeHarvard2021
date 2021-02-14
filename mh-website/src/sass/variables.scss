@@ -1,25 +1,23 @@
-// @font-face {
-//     font-family: "Actor";
-//     src: url("../assets/fonts/Actor/Actor-Regular.ttf");
-// }
-// @font-face {
-//     font-family: "Varela Round";
-//     src: url("../assets/fonts/Varela_Round/VarelaRound-Regular.ttf");
-// }
-// @font-face {
-//     font-family: "Fredoka One";
-//     src: url("../assets/fonts/Fredoka_One/FredokaOne-Regular.ttf");
-// }
+@font-face {
+    font-family: "NunitoSans";
+    src: url("../assets//fonts/nunitosans/NunitoSans-Regular.ttf");
+}
+@font-face {
+    font-family: "Playfair";
+    src: url("../assets//fonts/playfair/PlayfairDisplay.ttf");
+}
 // //set css variables
 :root {
     --blue: #47678b;
 
-    //--actor: "Actor", sans-serif;
+    --nunito: "NunitoSans", sans-serif;
+    --playfair: "Playfair", sans-serif;
 }
 //then call css variables as css variables
 $blue: var(--blue);
 
-//$font-actor: var(--actor);
+$font-nunito: var(--nunito);
+$font-playfair: var(--playfair);
 
 @function calcvw($pxvalue) {
     @return (1vw * ($pxvalue / 19.2));
