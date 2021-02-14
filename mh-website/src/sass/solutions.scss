@@ -1,3 +1,9 @@
+@import "./variables.scss";
+.solutions-wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
 #aboutussvg {
     .cls-1 {
         fill: #4c678b;
@@ -43,4 +49,12 @@
     .cls-8 {
         stroke-width: 2px;
     }
+}
+
+.aboutus-wrapper {
+    width: calcvw(1280);
+    position: absolute;
+    left: 50vw;
+    top: 6vw;
+    transform: translate(-33.3333vw, 0);
 }
