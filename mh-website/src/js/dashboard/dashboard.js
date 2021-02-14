@@ -35,7 +35,7 @@ export default function Dashboard() {
     }
     return (
         <div className='dashboard-wrapper'>
-            dashboard logged in
+
         </div>
     )
 
