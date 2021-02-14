@@ -14,7 +14,7 @@ import { CustomLink } from './components'
 
 function App() {
   return (
-    <div className="App">
+    <div id="App" className="App">
 
       <Router>
         <Switch>

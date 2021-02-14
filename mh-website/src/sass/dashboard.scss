@@ -345,3 +345,28 @@
     left: calcvw(1660);
     cursor: pointer;
 }
+
+#modalsvg {
+    width: calcvw(1000);
+    .cls-1 {
+        fill: #22202e;
+    }
+
+    .cls-2 {
+        fill: #676f84;
+    }
+
+    .cls-3 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+    }
+}
+
+.greeting {
+    position: absolute;
+    top: calcvw(40);
+    left: calcvw(380);
+    font-size: calcvw(48);
+    font-family: $font-playfair;
+}

@@ -138,7 +138,7 @@ export default function Login() {
                     setMode(!signUpMode)
                 }}
             >
-                {createMode ?? (signUpMode ?
+                {!createMode ?? (signUpMode ?
                     'already have an account? SIGN IN' :
                     "don't have an account? SIGN UP"
                 )}

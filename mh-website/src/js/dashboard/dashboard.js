@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import firebase from '../utils/firestore'
 import "firebase/auth";
 import { useHistory, useRouteMatch, Switch, Route, } from 'react-router-dom';
@@ -7,10 +7,24 @@ import { getUserFromUID } from '../utils/firestoreUtils'
 import TrackMap from './trackmap'
 import { CustomLink } from '../components'
 
-import { dashboardsvg, plussvg } from '../../assets/asset'
+import { dashboardsvg, plussvg, modalsvg } from '../../assets/asset'
 
 import '../../sass/dashboard.scss'
+import Modal from 'react-modal';
 
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)'
+    }
+};
+
+// Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement('#root')
 
 export default function Dashboard() {
     //check if user exists
@@ -18,6 +32,15 @@ export default function Dashboard() {
     let { path, url } = useRouteMatch();
     const [userData, setUserData] = useState(null);
     console.log(path)
+
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
 
     useEffect(() => {
         console.log(firebase.auth().currentUser)
@@ -44,7 +67,7 @@ export default function Dashboard() {
             </div>
         )
     }
-    console.log('user is avail!!', path)
+    console.log('user is avail!!', userData)
     return (
         <div className='dashboard-wrapper'>
             <Switch>
@@ -66,12 +89,26 @@ export default function Dashboard() {
                         </div>
                         <div className='plus-wrapper'
                             onClick={() => {
-                                history.push(`${path}/trackmap/90502`)
+                                openModal(true)
                             }}
                         >
                             {plussvg}
                         </div>
+                        <Modal
+                            isOpen={modalIsOpen}
+                            onRequestClose={closeModal}
+                            style={customStyles}
+                            contentLabel="Add a Device"
+                        >
+                            {modalsvg}
+
+                        </Modal>
                         {dashboardsvg}
+                        <div className='greeting'>
+                            Good Evening, <span>{
+                                userData.get('first') + " " + userData.get('last')
+                            }</span>
+                        </div>
                     </div>
                 </Route>
             </Switch>
