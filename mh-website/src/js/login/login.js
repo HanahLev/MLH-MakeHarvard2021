@@ -85,7 +85,7 @@ export default function Login() {
         <div className='login-wrapper'>
 
             <div className='login-title'>
-                {createMode ? 'create your account' :
+                {createMode ? 'next...' :
                     'welcome!'
                 }
             </div>
@@ -101,7 +101,6 @@ export default function Login() {
                     <Row className='login-row'>
                         <Col s={12}  >
                             <TextInput
-                                id='email'
                                 label='email'
                                 className='login-email'
                                 onChange={e => setEmail(e.target.value)}
@@ -111,7 +110,6 @@ export default function Login() {
                     <Row className='login-row'>
                         <Col s={12} >
                             <TextInput
-                                id='password'
                                 password
                                 label='password'
                                 className='login-password'

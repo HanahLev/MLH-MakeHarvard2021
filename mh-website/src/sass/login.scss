@@ -74,3 +74,21 @@
         margin: 0 8px;
     }
 }
+
+.create-form-submit {
+    font-size: 24px;
+    background-color: #4caf50; /* Green */
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    color: white;
+    padding: 12px 24px;
+    margin: 24px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.login-email {
+    -webkit-appearance: none;
+}
