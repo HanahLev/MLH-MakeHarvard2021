@@ -1,0 +1,51 @@
+@import "./variables.scss";
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.login-title {
+    font-size: calcvw(72);
+}
+.login-area {
+    width: calcvw(400);
+    background: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    border: 3px solid black;
+}
+.login-subtitle {
+    font-size: calcvw(24);
+    font-weight: bold;
+    color: $blue;
+    margin: 25px 0;
+}
+.login-divider {
+    font-weight: bold;
+    margin: 10px 0;
+}
+.login-row {
+    margin: 0;
+    display: flex;
+
+    .input-field {
+        margin: 0;
+    }
+}
+
+.login-signin-button {
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.alt-login {
+}
