@@ -42,5 +42,27 @@ $backbtnheight: calcvw(100);
 }
 
 .trackmap-item-wrapper {
-    height: 300px;
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    > * {
+        display: flex;
+    }
+}
+
+.center-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+.center-address {
+    font-size: 18px;
+}
+
+.location-svg-wrapper {
+    width: 25px;
+    height: 25px;
+}
+.clock-svg-wrapper {
+    width: 25px;
+    height: 25px;
 }

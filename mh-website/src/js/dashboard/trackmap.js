@@ -57,7 +57,7 @@ export default function TrackMap() {
                         { data.testCenters.map((item, index) => (
                             <Marker
                                 key={index}
-                                label={item.name}
+                                label={index + '. ' + item.name}
                                 position={{
                                     lat: item["latitude"],
                                     lng: item["longitude"]
@@ -89,6 +89,7 @@ const MapContainer = (props) => {
                 zoom={13}
                 center={props.defaultCenter}
             >
+                {props.children}
             </GoogleMap>
         </LoadScript>
     )
