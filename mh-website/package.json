@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.1",
+    "axios-hooks": "^2.3.0",
     "firebase": "^8.2.7",
     "formik": "^2.2.6",
     "lodash.foreach": "^4.5.0",
@@ -15,6 +16,7 @@
     "react-google-maps": "^9.4.5",
     "react-hook-form": "^6.15.1",
     "react-materialize": "^3.9.7",
+    "react-perfect-scrollbar": "^1.5.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "web-vitals": "^1.1.0"
