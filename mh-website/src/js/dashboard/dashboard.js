@@ -7,6 +7,10 @@ import { getUserFromUID } from '../utils/firestoreUtils'
 import TrackMap from './trackmap'
 import { CustomLink } from '../components'
 
+import { dashboardsvg, plussvg } from '../../assets/asset'
+
+import '../../sass/dashboard.scss'
+
 
 export default function Dashboard() {
     //check if user exists
@@ -23,6 +27,7 @@ export default function Dashboard() {
                     .then(data => {
                         if (data) {
                             setUserData(data)
+                            console.log(user)
                         } else {
                             history.push('/login')
                         }
@@ -52,15 +57,21 @@ export default function Dashboard() {
                 </Route>
                 <Route exact path={path}>
                     <div>
-                        regular dashboard!!
-                        <span
+                        <div className='covidbtn'
                             onClick={() => {
                                 history.push(`${path}/trackmap/90502`)
                             }}
                         >
-                            click
-                        </span>
-
+                            COVID TESTS NEAR ME
+                        </div>
+                        <div className='plus-wrapper'
+                            onClick={() => {
+                                history.push(`${path}/trackmap/90502`)
+                            }}
+                        >
+                            {plussvg}
+                        </div>
+                        {dashboardsvg}
                     </div>
                 </Route>
             </Switch>

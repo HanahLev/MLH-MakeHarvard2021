@@ -1,0 +1,347 @@
+@import "./variables.scss";
+#dashboardsvg {
+    width: 100vw;
+    .cls-1 {
+        fill: #fbfafa;
+    }
+
+    .cls-2,
+    .cls-3,
+    .cls-41 {
+        fill: #676f84;
+    }
+
+    .cls-2,
+    .cls-55 {
+        opacity: 0.5;
+    }
+
+    .cls-4 {
+        fill: #fff;
+    }
+
+    .cls-5,
+    .cls-52,
+    .cls-58 {
+        font-size: 36px;
+        font-family: $font-playfair;
+        font-weight: 700;
+    }
+
+    .cls-5 {
+        letter-spacing: 0.08em;
+    }
+
+    .cls-6 {
+        letter-spacing: 0.02em;
+    }
+
+    .cls-20,
+    .cls-54,
+    .cls-55,
+    .cls-57,
+    .cls-7,
+    .cls-9 {
+        fill: none;
+        stroke-miterlimit: 10;
+    }
+
+    .cls-20,
+    .cls-7 {
+        stroke: #000;
+    }
+
+    .cls-7,
+    .cls-9 {
+        stroke-width: 2px;
+    }
+
+    .cls-8 {
+        fill: #140303;
+    }
+
+    .cls-57,
+    .cls-9 {
+        stroke: #22202e;
+    }
+
+    .cls-10,
+    .cls-21,
+    .cls-24,
+    .cls-27,
+    .cls-46,
+    .cls-72 {
+        font-size: 18px;
+    }
+
+    .cls-10,
+    .cls-21,
+    .cls-24,
+    .cls-27,
+    .cls-41,
+    .cls-46,
+    .cls-56,
+    .cls-66,
+    .cls-72 {
+        font-family: $font-nunito;
+    }
+
+    .cls-11 {
+        letter-spacing: -0.01em;
+    }
+
+    .cls-12 {
+        letter-spacing: -0.01em;
+    }
+
+    .cls-13 {
+        letter-spacing: 0em;
+    }
+
+    .cls-14 {
+        letter-spacing: 0em;
+    }
+
+    .cls-15 {
+        letter-spacing: 0.01em;
+    }
+
+    .cls-16 {
+        letter-spacing: 0em;
+    }
+
+    .cls-17 {
+        letter-spacing: 0em;
+    }
+
+    .cls-18 {
+        letter-spacing: 0em;
+    }
+
+    .cls-19 {
+        letter-spacing: -0.01em;
+    }
+
+    .cls-21,
+    .cls-24,
+    .cls-51,
+    .cls-58,
+    .cls-66,
+    .cls-72 {
+        fill: #22202e;
+    }
+
+    .cls-21,
+    .cls-46 {
+        letter-spacing: 0.01em;
+    }
+
+    .cls-22,
+    .cls-24,
+    .cls-27 {
+        letter-spacing: 0.03em;
+    }
+
+    .cls-23,
+    .cls-72 {
+        letter-spacing: 0.01em;
+    }
+
+    .cls-25 {
+        letter-spacing: 0.01em;
+    }
+
+    .cls-26 {
+        letter-spacing: -0.05em;
+    }
+
+    .cls-28 {
+        letter-spacing: 0.01em;
+    }
+
+    .cls-29 {
+        letter-spacing: 0.02em;
+    }
+
+    .cls-30 {
+        letter-spacing: -0.04em;
+    }
+
+    .cls-31 {
+        letter-spacing: 0em;
+    }
+
+    .cls-32 {
+        letter-spacing: 0em;
+    }
+
+    .cls-33 {
+        letter-spacing: 0em;
+    }
+
+    .cls-34 {
+        letter-spacing: -0.01em;
+    }
+
+    .cls-35 {
+        letter-spacing: 0.01em;
+    }
+
+    .cls-36 {
+        letter-spacing: -0.02em;
+    }
+
+    .cls-37 {
+        letter-spacing: 0em;
+    }
+
+    .cls-38 {
+        letter-spacing: 0em;
+    }
+
+    .cls-39 {
+        letter-spacing: -0.02em;
+    }
+
+    .cls-40 {
+        letter-spacing: 0em;
+    }
+
+    .cls-41,
+    .cls-56 {
+        font-size: 13px;
+    }
+
+    .cls-42 {
+        letter-spacing: 0.02em;
+    }
+
+    .cls-43 {
+        letter-spacing: 0.02em;
+    }
+
+    .cls-44 {
+        letter-spacing: 0.02em;
+    }
+
+    .cls-45 {
+        letter-spacing: -0.01em;
+    }
+
+    .cls-47 {
+        letter-spacing: -0.02em;
+    }
+
+    .cls-48 {
+        letter-spacing: 0.01em;
+    }
+
+    .cls-49 {
+        letter-spacing: -0.08em;
+    }
+
+    .cls-50 {
+        letter-spacing: -0.03em;
+    }
+
+    .cls-52,
+    .cls-56 {
+        fill: #80889f;
+    }
+
+    .cls-53 {
+        letter-spacing: -0.05em;
+    }
+
+    .cls-54,
+    .cls-55 {
+        stroke: #676f84;
+    }
+
+    .cls-54,
+    .cls-57 {
+        stroke-width: 3px;
+    }
+
+    .cls-59 {
+        letter-spacing: 0em;
+    }
+
+    .cls-60 {
+        letter-spacing: 0.03em;
+    }
+
+    .cls-61 {
+        letter-spacing: -0.01em;
+    }
+
+    .cls-62 {
+        letter-spacing: 0.01em;
+    }
+
+    .cls-63 {
+        letter-spacing: 0em;
+    }
+
+    .cls-64 {
+        letter-spacing: -0.02em;
+    }
+
+    .cls-65 {
+        letter-spacing: -0.01em;
+    }
+
+    .cls-66 {
+        font-size: 16px;
+    }
+
+    .cls-67 {
+        letter-spacing: -0.04em;
+    }
+
+    .cls-68 {
+        letter-spacing: -0.01em;
+    }
+
+    .cls-69 {
+        letter-spacing: -0.01em;
+    }
+
+    .cls-70 {
+        letter-spacing: 0em;
+    }
+
+    .cls-71 {
+        letter-spacing: -0.03em;
+    }
+
+    .cls-73 {
+        letter-spacing: 0.02em;
+    }
+}
+
+.covidbtn {
+    position: absolute;
+    top: calcvw(400);
+    left: calcvw(70);
+    font-size: calcvw(18);
+    cursor: pointer;
+}
+
+#plussvg {
+    .cls-1 {
+        font-size: 36px;
+        fill: #22202e;
+        font-family: RecoletaAlt-Bold, Recoleta Alt;
+        font-weight: 700;
+    }
+}
+
+.plus-wrapper {
+    width: calcvw(30);
+    height: auto;
+    position: absolute;
+    top: calcvw(725);
+    left: calcvw(1660);
+    cursor: pointer;
+}
